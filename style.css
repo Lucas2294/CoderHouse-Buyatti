@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+/* font-family: 'Russo One', sans-serif; */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    color: rgb(50, 50, 50);
+    font-family: 'Racing Sans One', cursive;
+}
+
+
+
+.imgCarousel{
+    object-fit: cover;
+    height: 40vh;
+}
+.botonNav{
+    border: none;
+}
+
+/* INDEX */
+
+.homee{
+    background: rgb(56,20,96);
+    background: linear-gradient(153deg, rgba(56,20,96,1) 52%, rgba(105,48,195,1) 100%);  
+    display: flex;
+    flex-direction: row;
+}
+
+.homeInfo{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    /* align-items: center; */
+    padding: 3%;
+}
+
+.cuadro{
+    width: 80%;
+    height: 40vh;
+    background-color: #252525;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 2px solid #6930C3;
+    /* display: flex; */
+    /* flex-direction: row; */
+    padding: 3% 2% 3% 2%;
+}
+
+.cuadroUno{
+    align-self: flex-start;
+}
+.cuadroDos{
+    align-self: center;
+}
+.cuadroTres{
+    align-self: flex-end;
+}
+.imgCuadro{
+    width: 30%;
+    height: min-content;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px rgb(255 255 255);
+    float: left;
+    margin-right: 2%;
+}
+.divCuadro{
+    width: 100%;
+    padding-left: 2%;
+}
+.tituloCuadro{
+    color: aliceblue;
+    text-align: center;
+    text-decoration: underline;
+    padding-left: 2%;
+    margin-left: 30%;
+
+}
+.pCuadro{
+    text-align: left;
+    color: #FFBD69;
+    padding-left: 2%;
+}
+
+.asaide{
+    width: 15%;
+    height: max-content;
+    min-height: 100vh;
+    background-color: #252525;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #6930C3;
+    padding: 1rem;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pAside{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* CATEGORIA 1 */
+
+/* PODIO */
+.categoriaUno{
+    background: rgb(178,31,102);
+    background: linear-gradient(159deg, rgba(178,31,102,1) 4%, rgba(56,20,96,1) 73%);
+}
+
+.podio{
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pcategoria{
+    font-size: 3rem;
+}
+
+.divPodio{
+    border-radius: 20px;
+    background-color: rgb(190, 190, 202);
+    width: 30vw;
+    height: 80%;
+    background-image: url(img/1_39.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.pPodio{
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+#imgPrimero:hover{
+    transition: all 1s ease;
+    background-image: url(img/road-in-forest.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+#imgSegundo:hover{
+    transition: all 1s ;
+    background-image: url(img/road-in-forest.jpg);
+}
+
+#imgTercero:hover{
+    transition: all 1s;
+    background-image: url(img/road-in-forest.jpg);
+}
+
+/* PUESTOS */
+.secPuestos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    min-height: 100vh;
+}
+
+.puestos{
+    height: 6vh;
+    width: 80%;
+    background-color: #FE346E;
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* padding-top: 0.4rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgb(6 24 44 / 40%) 0px 0px 0px 2px, rgb(6 24 44 / 65%) 0px 8px 10px -1px, rgb(255 255 255 / 8%) 0px 1px 0px inset;
+    transition: all 1s ease;
+}
+
+.puestos:hover{
+    transform: scale(1.2);
+
+}
+
+.puesto{
+    background-color: #fff;
+    width: 3rem;
+    height: 80%;
+    border-radius: 10px;
+    color: #FFBD69;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombrePuesto{
+    background-color: #fff;
+    color: #381460;
+    height: 80%;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntosPuesto{
+    background-color: #fff;
+    height: 80%;
+    width: 5rem;
+    border-radius: 10px;
+    color: #381460;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+/* Paleta de colores https://colorhunt.co/palette/2525256930c364dfdf80ffdb 
+https://colorhunt.co/palette/381460b21f66fe346effbd69*/
+
+
+
+/* MEDIA QUERIS */
+@media (max-width:920px) {
+    .cuadro{
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .asaide{
+        display: none;
+    }
+    .homeInfo{
+        width: 100%;
+    }
+    .cuadro{
+        width: 100%;
+    }
+}
+
+@media (max-width: 608px) {
+    .cuadro{
+        height: fit-content;
+    }
+    .nombrePuesto{
+        font-size: 1.6rem;
+        padding-top: 0.3rem;
+    }
+    .podio{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    #imgSegundo{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #imgPrimero{
+        grid-column: 2/3;
+    grid-row: 1/2;
+    }
+    #imgTercero{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .pPodio{
+        font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 495px) {
+    .nombrePuesto{
+        font-size: 1.3rem;
+        padding-top: 0.5rem;
+    }
+  }
+
+  @media (max-width: 414px) {
+    .nombrePuesto{
+        font-size: 1.2rem;
+        padding-top: 0rem;
+        line-height: normal;
+    }
+    .puntosPuesto{
+        width: 3rem;
+    }
+  }
+
+  @media (max-width: 370px) {
+    .nombrePuesto{
+        font-size: 1.1rem;
+        padding-top: 0.2rem;
+        line-height: normal;
+    }
+  }
+
+
+
+
+
+  /* CODERHOUSE */
+  .difCategorias{
+    background: rgb(178,31,102);
+    background: linear-gradient(159deg, rgba(178,31,102,1) 4%, rgba(56,20,96,1) 73%);
+    min-height: 80vh;
+    padding-top: 5%;
+  }
+
+  .selecCategorias{
+    height: 350px;
+    width: 100%;
+    background-color: #252525;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+  }
+
+  .elegirCategorias{
+    width: 30%;
+    height: 70%;
+    background-color: #FE346E;
+    border-radius: 10px;
+  }
+
+  .tCategoriasElegir{
+      text-align: center;
+  }
+
+  .formCategoria{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-content: center;
+    margin: auto;
+    margin-top: 5%;
+    border: 2px solid #252525;
+    border-radius: 5%;
+    color: #fff;
+    padding: 3%;
+
+  }
+  .formCategoria label{
+      color: #fff;
+      padding-left: 2%;
+  }
+  .formCategoria input{
+      border-radius: 10px;
+      padding-left: 3%;
+      margin-bottom: 10%;
+  }
+
+  .btnForm{
+    border-radius: 10px;
+    width: fit-content;
+    padding: 3%;
+    margin: auto;
+    margin-top: 10%;
+  }
+
+  .divRespuesta{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+  }
+  #msjRespuesta{
+      color: #fff;
+      margin: auto;
+  }
+
+  .mensajeAgregado{
+      width: fit-content;
+      border: 4px solid #252525;
+      padding: 10px;
+      background-color: #FFBD69;
+      border-radius: 20px;
+  }
+  .mensajeAgregadoIncorrecto{
+    width: fit-content;
+    border: 4px solid #252525;
+    padding: 10px;
+    background-color: red;
+    border-radius: 20px;
+  }

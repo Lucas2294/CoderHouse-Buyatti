@@ -1,0 +1,43 @@
+[
+    {
+        "nombre" : "Lucas Buyatti",
+        "puntos" : 48,
+        "puesto" : 2,
+        "localidad" : "Reconquista",
+        "imagen" : "url(img/Segundo.jpg)"
+    },
+
+    {
+        "nombre" : "Cacho Castaña",
+        "puntos" : 39,
+        "puesto" : 3,
+        "localidad" : "Nelson",
+        "imagen" : "url(img/SL-102820-37320-10.jpg)"
+    },
+
+    {
+        "nombre" : "Lionel Sessi",
+        "puntos" : 100,
+        "puesto" : 1,
+        "localidad" : "Maracaibo",
+        "imagen" : "url(img/Primero.jpg)"
+    },
+
+    {
+        "nombre" : "Ricardo Iorio",
+        "puntos" : 18,
+        "puesto" : 5,
+        "localidad" : "Nelson",
+        "imagen" : "url(img/Segundo.jpg)"
+    },
+
+    {
+        "nombre" : "David Jeta",
+        "puntos" : 22,
+        "puesto" : 4,
+        "localidad" : "Nelson",
+        "imagen" : "url(img/Segundo.jpg)"
+    }
+]
+
+
