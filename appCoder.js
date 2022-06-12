@@ -1,19 +1,8 @@
-// window.onload = function () {
-//     console.log("function called...");
-//     alert("Bienvenido, si quieres correr contesta las siguientes preguntas!")
-//     let nombre = prompt("Ingrese su nombre")
-//     let categoria = prompt("Cual categoría quieres correr?")
-//     if (categoria == 1 || categoria == 2 || categoria == 3) {
-//         let cantFechas = prompt("Cuantas fechas quieres correr? Máximo 12")
-//         if (cantFechas >= 1 && cantFechas <= 12) {
-//             respuesta(categoria, cantFechas, nombre)
-//         } else alert("Introdujiste un dato erroneo")
-//     }
-//   }
+let localGuar = null
 
 
 
-
+let mensajeRespuesta = document.getElementById("msjRespuesta")
 let btnCategoriaForm = document.getElementById("btnCategoriaForm")
 btnCategoriaForm.addEventListener("click", botonCalcular)
 
@@ -27,7 +16,7 @@ function botonCalcular() {
             respuesta(categoria, fechas, nombre)
         }
     } else {
-        let mensajeRespuesta = document.getElementById("msjRespuesta")
+        
         mensajeRespuesta.className = "mensajeAgregadoIncorrecto"
         mensajeRespuesta.innerHTML = "Ingresaste una categoría incorrecta. Prueba de nuevo"
     }
@@ -38,40 +27,60 @@ function botonCalcular() {
 
 
 
+function respuesta(categoria, fechas, nombre) {
 
 
 
+        let precio = null
+        // if (categoria == 1) {
+        //     precio = 200 * fechas;
+        // } else if (categoria == 2) {
+        //     precio = 100 * fechas;
+        // } else if (categoria == 3) {
+        //     precio = 50 * fechas;
+        // }
+
+        categoria == 1 ? precio = 200 * fechas : 
+        categoria == 2 ? precio = 100 * fechas : precio = 50 * fechas;
 
 
 
+        let p1 = new PilotoC(nombre, categoria, fechas, precio)
+        mensajeRespuesta.className = "mensajeAgregado"
 
-  function respuesta(categoria, fechas, nombre) {
-      let precio = null
-      let mensajeRespuesta = document.getElementById("msjRespuesta")
-      if (categoria == 1) {
-          precio = 200 * fechas;
-      } else if (categoria == 2) {
-         precio = 100 * fechas;
-      } else if (categoria == 3) {
-        precio = 50 * fechas;
-      }
+        const {
+            nombre: nombreP,
+            categoria: categoriaP,
+            fechas: fechasP,
+            precioPagar: precioPagarP
+        } = p1
 
-      console.log(precio);
+        mensajeRespuesta.innerHTML = `${nombreP}, si querés correr en la categoría ${categoriaP} durante ${fechasP} fechas, deberás pagar $${precioPagarP}`
 
-      let p1 = new PilotoC(nombre, categoria, fechas, precio)
-      console.log(p1);
-      mensajeRespuesta.className = "mensajeAgregado"
+        p1Parseado = JSON.stringify(p1)
+        localStorage.setItem('pilotoStorage', p1Parseado)
 
-      mensajeRespuesta.innerHTML = `${p1.nombre}, si querés correr en la categoría ${p1.categoria} durante ${p1.fechas} fechas, deberás pagar $${p1.precioPagar}`
-  }
-
+        localGuar = JSON.parse(localStorage.getItem("pilotoStorage"))
+    } 
 
 
 class PilotoC {
-constructor(nombre, categoriaCorrer, fechasCorrer, precioPagar) {
-    this.nombre = nombre;
-    this.categoria = categoriaCorrer;
-    this.fechas = fechasCorrer;
-    this.precioPagar = precioPagar;
+    constructor(nombre, categoriaCorrer, fechasCorrer, precioPagar) {
+        this.nombre = nombre;
+        this.categoria = categoriaCorrer;
+        this.fechas = fechasCorrer;
+        this.precioPagar = precioPagar;
+    }
 }
+
+let cartelLocal = () => {
+    
+    if (localStorage.length > 0) {
+        localGuar = JSON.parse(localStorage.getItem("pilotoStorage"))
+
+        mensajeRespuesta.className = "mensajeAgregado";
+        mensajeRespuesta.innerHTML = `${localGuar.nombre}, si querés correr en la categoría ${localGuar.categoria} durante ${localGuar.fechas} fechas, deberás pagar $${localGuar.precioPagar}`;
+    }
 }
+
+window.onload = cartelLocal
